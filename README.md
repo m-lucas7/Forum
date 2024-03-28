@@ -6,8 +6,8 @@ Ce projet est réalisé dans le cadre du BTS SIO (Services Informatiques aux Org
 
 - [Installation du projet](#installation-du-projet)
 - [Base de données](#base-de-données)
-- [Construire un jeu d’essai](#construire-un-jeu-d’essai)
-- [Installation et configuration d’API Platform](#installation-et-configuration-d’api-platform)
+- [Mise en place de Faker](#mise-en-place-de-faker)
+- [Installation et configuration d’API Platform](#installation-et-configuration-dapi-platform)
 - [Pagination](#pagination)
 - [Modifier la pagination pour l’ensemble des API](#modifier-la-pagination-pour-l’ensemble-des-api)
 - [Pagination personnalisée sur chaque entité](#pagination-personnalisée-sur-chaque-entité)
@@ -64,4 +64,13 @@ Ajouter :
 - php bin/console make:migration
 - php bin/console doctrine:migrations:migrate
 
-## Construire un jeu d’essai
+## Mise en place de Faker
+
+- composer require orm-fixtures --dev
+- composer require fakerphp/faker
+- php bin/console doctrine:fixtures:load
+
+## Installation et configuration d’API Platform
+
+- composer require api
+- composer require symfony/apache-pack
