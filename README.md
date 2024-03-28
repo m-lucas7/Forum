@@ -24,9 +24,10 @@ Ce projet est réalisé dans le cadre du BTS SIO (Services Informatiques aux Org
 
 Version utilisée de PHP : 8.3
 
-composer create-project symfony/skeleton forum 6.3.*
+```composer create-project symfony/skeleton forum 6.3.*
 composer require symfony/orm-pack
 composer require --dev symfony/maker-bundle
 cp .env .env.local
+```
 
 ## Base de données
