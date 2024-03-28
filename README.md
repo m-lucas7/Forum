@@ -51,11 +51,13 @@ dateInscription : datetime non nul
 
 Ajouter :
 
-titre : string 50 caractères non nul
-datePoste : datetime non nul
-contenu : text non nul
-champ user relation ManyToOne vers User
-champ parent ManyToOne vers Message
+```
+- titre : string 50 caractères non nul
+- datePoste : datetime non nul
+- contenu : text non nul
+- champ user relation ManyToOne vers User
+- champ parent ManyToOne vers Message
+```
 
 - php bin/console make:migration
 - php bin/console doctrine:migrations:migrate
