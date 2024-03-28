@@ -24,10 +24,40 @@ Ce projet est réalisé dans le cadre du BTS SIO (Services Informatiques aux Org
 
 Version utilisée de PHP : 8.3
 
-```composer create-project symfony/skeleton forum 6.3.*
+```
+composer create-project symfony/skeleton forum 6.3.*
 composer require symfony/orm-pack
 composer require --dev symfony/maker-bundle
 cp .env .env.local
 ```
 
 ## Base de données
+
+```
+DATABASE_URL="mysql://login????:XXXXXXXXXXXXXXX@127.0.0.1:3306/dbforum?serverVersion=10.3.39-MariaDB"
+php bin/console doctrine:database:create
+composer require symfony/security-bundle
+php bin/console make:user
+php bin/console make:entity User
+```
+
+Ajouter :
+
+nom : string de 30 caractères non nul
+prenom : string de 30 caractères non nul
+dateInscription : datetime non nul
+
+- php bin/console make:entity Message
+
+Ajouter :
+
+titre : string 50 caractères non nul
+datePoste : datetime non nul
+contenu : text non nul
+champ user relation ManyToOne vers User
+champ parent ManyToOne vers Message
+
+- php bin/console make:migration
+- php bin/console doctrine:migrations:migrate
+
+## Construire un jeu d’essai
