@@ -43,9 +43,11 @@ php bin/console make:entity User
 
 Ajouter :
 
-nom : string de 30 caractères non nul
-prenom : string de 30 caractères non nul
-dateInscription : datetime non nul
+```
+- nom : string de 30 caractères non nul
+- prenom : string de 30 caractères non nul
+- dateInscription : datetime non nul
+```
 
 - php bin/console make:entity Message
 
